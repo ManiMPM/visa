@@ -1,0 +1,28 @@
+
+<div class="container">    
+        <div class="col-xs-2 logo-section">
+            <a href="#" > <img src="/assets/images/indexlogo.png" class="img-responsive"  title="Visa logo"> </a>
+        </div>    
+        <div class="col-xs-10 visa-menu-list">
+             <ul class="visa-menu pull-right">
+                 <li class="hidden-xs" [ngStyle]="{active: selectedItemIndex === 0}" (click)="navigateMenuItem($event,0)"><a href="#">Pay With Visa</a></li>
+                 <li class="hidden-xs" [ngStyle]="{active: selectedItemIndex === 1}" (click)="navigateMenuItem($event,1)"><a href="#">Partner With Us</a></li>
+                 <li class="hidden-xs" [ngStyle]="{active: selectedItemIndex === 2}" (click)="navigateMenuItem($event,2)"><a href="#">Run Your Business</a></li>
+                 <li class="hidden-xs" [ngStyle]="{active: selectedItemIndex === 3}" (click)="navigateMenuItem($event,3)"><a href="#">Travel With Visa</a></li>
+                 <li class="hidden-xs" [ngStyle]="{active: selectedItemIndex === 4}" (click)="navigateMenuItem($event,4)"><a href="#">Visa Everywhere</a></li>
+                 <li (click)="navigateMenuItem($event,5)" 
+                 [ngStyle]="{active: selectedItemIndex === 5}">
+                 <span (click)="openMenu()" class="glyphicon glyphicon-menu-hamburger visible-xs " aria-hidden="true"></span><span class="glyphicon glyphicon-search" aria-hidden="true"></span></li>
+             </ul>
+             <img [hidden]="!navigate" [ngStyle]="{left: animateDistance}" src="/assets/images/arrow-up.png" class="arrow-up" />
+        </div>
+        <div class="mobile-visa-menu-list col-xs-12" [ngClass]="{active: mobileViewMenu}">
+             <ul class="moboile-visa-menu">
+                 <li><a href="#"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>Pay With Visa</a></li>
+                 <li><a href="#"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>Partner With Us</a></li>
+                 <li><a href="#"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>Run Your Business</a></li>
+                 <li><a href="#"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>Travel With Visa</a></li>
+                 <li><a href="#"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>Visa Everywhere</a></li>
+             </ul>
+        </div>    
+    </div>
